@@ -6,7 +6,7 @@ export default function ArticleCard({
   title,
 }: ArticleCardProps) {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
+    <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-violet-500 hover:-translate-y-1 transition-all duration-300">
 
       <span className="text-violet-400 text-sm">
         Tutorial

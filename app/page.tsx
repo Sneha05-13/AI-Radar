@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import ToolCard from "../components/ToolCard";
 import ArticleCard from "../components/ArticleCard";
 import Footer from "../components/Footer";
+import { tools } from "../data/tools";
 
 export default function Home() {
   return (
@@ -19,25 +20,58 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <ToolCard
-              name="ChatGPT"
-              category="AI Assistant"
-            />
+          {tools.map((tool) => (
+         <ToolCard
+          key={tool.name}
+         name={tool.name}
+         category={tool.category}
+         description={tool.description}
+          />
+         ))}
 
-            <ToolCard
-              name="Claude"
-              category="Writing AI"
-            />
-
-            <ToolCard
-              name="Cursor"
-              category="Coding AI"
-            />
-
-          </div>
+         </div>
 
         </div>
       </section>
+
+
+      <section className="bg-slate-950 py-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <h2 className="text-4xl font-bold text-white mb-10">
+      Popular Categories
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        🧠 Writing AI
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        💻 Coding AI
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        🎨 Image AI
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        🎥 Video AI
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        📈 Marketing AI
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        📚 Education AI
+      </div>
+
+      </div>
+
+     </div>
+     </section>
 
       <section className="bg-slate-950 py-20">
   <div className="max-w-7xl mx-auto px-6">
